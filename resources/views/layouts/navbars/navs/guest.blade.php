@@ -8,7 +8,8 @@
                     <span class="navbar-toggler-bar bar3"></span>
                 </button>
             </div>
-            <a class="navbar-brand" href="#pablo">{{ __('Paper Dashboard') }}</a>
+            <a class="navbar-brand" href="#">{{ __('SENTIMENT REVIEWS') }}</a><br/>
+            <a class="navbar-brand" href="#">{{ __('Get online reviews & insights | Improve ratings') }}</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
