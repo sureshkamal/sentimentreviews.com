@@ -1,0 +1,59 @@
+body.stores{
+	width: 100%;
+	height: auto;
+	font-family: "Figtree", Helvetica;
+}
+.container{
+	width: 390px;
+	margin: 0 auto;
+}
+.bg-landing{
+	height: 870px;
+	flex-shrink: 0;
+}
+.bg-store-gradient{
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.98) 51.04%, #000 100%);
+
+}
+.bg-eclipse{
+	background: url(/stores-assets/images/stores/ellipse.png) no-repeat;
+    width: 128px;
+    display: block;
+    height: 125px;
+}
+.bg-eclipse img{
+	margin: 22px 0 0 24px;
+}
+    
+.stores h1{
+	font-family: "Figtree", Helvetica;
+	color: #fff!important;
+}
+
+.font-inter{
+	font-family: "Inter", Helvetica;
+}
+.store-description{
+	color: #FFF;
+	font-family: Inter;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.btn-store{
+	width: 310px;
+	height: 66px;
+	flex-shrink: 0;
+	border-radius: 5px;
+	color: #FFF;
+	font-family: Figtree;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 66px;
+	background: #ffffff33;
+	display: block;
+	text-align: center;
+	margin-top:10px;
+}
