@@ -20,7 +20,7 @@
             </div>  
             <div class="row">
                 <div class="col-sm-12">
-                    <div style="padding:25px">
+                    <div style="padding:25px 25px 0">
                         <p class="font-inter store-description">
                             We’d love to hear how your experience was, it’ll take just a minute.
                         </p>
@@ -37,6 +37,17 @@
                 <div class="social-links">
                     <a href="https://facebook.com"><img src="/stores-assets/images/icons/facebook.png"> </a>
                     <a href="https://instagram.com"><img src="/stores-assets/images/icons/instagram.png"> </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="https://sentiment-reviews.com" style="width: 100%;
+                    display: block;
+                    text-align: center;
+                    margin-top: 10px;
+                    color: #fff;">
+                        www.sentiment-reviews.com
+                    </a>
                 </div>
             </div>
         </div>
