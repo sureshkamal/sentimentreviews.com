@@ -3,9 +3,11 @@ body.stores{
 	height: auto;
 	font-family: "Figtree", Helvetica;
 }
-.container{
-	width: 390px;
-	margin: 0 auto;
+.stores .container{
+	max-width: 390px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px;
 }
 .bg-landing{
 	height: 870px;
@@ -15,21 +17,39 @@ body.stores{
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.98) 51.04%, #000 100%);
 
 }
-.bg-eclipse{
-	background: url(/stores-assets/images/stores/ellipse.png) no-repeat;
-    width: 128px;
+.bg-eclipse {
+    background: url(/stores-assets/images/stores/ellipse.png) no-repeat;
+    width: 112px;
     display: block;
     height: 125px;
+    background-size: 112px;
 }
-.bg-eclipse img{
-	margin: 22px 0 0 24px;
+.clear{
+	clear: both;
 }
-    
-.stores h1{
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.bg-eclipse img {
+    margin: 18px 0px 0px 21px;
+    width: 75px;
+}
+.store-title {
+    font-size: 40px;
+    margin: 27px 0 0 7px;
+    font-weight: bold;
+}
+.stores h1, .store-title{
 	font-family: "Figtree", Helvetica;
 	color: #fff!important;
 }
 
+.font-figtree{
+	font-family: "Figtree", Helvetica;;
+}
 .font-inter{
 	font-family: "Inter", Helvetica;
 }
@@ -42,18 +62,50 @@ body.stores{
 	line-height: normal;
 }
 .btn-store{
-	width: 310px;
-	height: 66px;
+	/*width: 310px;
+	height: 66px;*/
 	flex-shrink: 0;
 	border-radius: 5px;
 	color: #FFF;
 	font-family: Figtree;
 	font-size: 16px;
 	font-style: normal;
-	font-weight: 600;
+	font-weight: bold;
 	line-height: 66px;
 	background: #ffffff33;
 	display: block;
 	text-align: center;
 	margin-top:10px;
+}
+ul.button-lists li{
+	position: relative;
+}
+.icon-google:before {
+    background: url(/stores-assets/images/icons/google.png) no-repeat;
+    content: " ";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+}
+.icon-open-table:before {
+    background: url(/stores-assets/images/icons/opentable.png) no-repeat;
+    content: " ";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    background-size: contain;
+    border-radius: 30px;
+}
+.icon-trip-advisor:before {
+    background: url(/stores-assets/images/icons/tripadvisor.png) no-repeat;
+    content: " ";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 15px;
+    top: 13px;
 }

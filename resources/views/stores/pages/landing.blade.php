@@ -7,14 +7,16 @@
     <div  style="background: url('/stores-assets/images/stores/yamamori.png'), lightgray 50% / cover no-repeat;">
          <div class="bg-landing bg-store-gradient" style="padding:200px 8px 8px">
             <div class="row" >
-                <div class="col-sm-4">
-                    <div class="bg-eclipse">
+                <div class="col-sm-12">
+                    <div class="bg-eclipse left">
                         <img src="/stores-assets/images/stores/yamamori-logo.png">
                     </div>
+                    <div class="left store-title">Yamamori</div>
+                    <div class="clear"></div>
                 </div>
-                 <div class="col-sm-8">
+                 <!-- <div class="col-sm-8">
                     <h1 style="margin-top:35px; margin-left:4px">Yamamori</h1>
-                </div>
+                </div> -->
             </div>  
             <div class="row">
                 <div class="col-sm-12">
@@ -22,10 +24,10 @@
                         <p class="font-inter store-description">
                             We’d love to hear how your experience was, it’ll take just a minute.
                         </p>
-                        <ul style="padding: 0; list-style: none;">
-                            <li><a href="#" class="btn-store">GOOGLE</a></li>
-                            <li><a href="#" class="btn-store">OPEN TABLE</a></li>
-                            <li><a href="#" class="btn-store">TRIP ADVISOR</a></li>
+                        <ul style="padding: 0; list-style: none;"  class="button-lists">
+                            <li><a href="#" class="btn-store icon-google">GOOGLE</a></li>
+                            <li><a href="#" class="btn-store icon-open-table">OPEN TABLE</a></li>
+                            <li><a href="#" class="btn-store icon-trip-advisor">TRIP ADVISOR</a></li>
                             <li><a href="#" class="btn-store">GET 15% OFF</a></li>
                         </ul>
                     </div>
