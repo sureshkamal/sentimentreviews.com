@@ -109,3 +109,11 @@ ul.button-lists li{
     left: 15px;
     top: 13px;
 }
+.social-links a img {
+    width: 32px;
+    margin: 5px;
+}
+.social-links {
+    width: 118px;
+    margin: 0 auto;
+}
