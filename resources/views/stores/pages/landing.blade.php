@@ -8,8 +8,8 @@
          <div class="bg-landing bg-store-gradient" style="padding:200px 8px 8px">
             <div class="row" >
                 <div class="col-sm-12">
-                    <div class="bg-eclipse left">
-                        <img src="/stores-assets/images/stores/yamamori-logo.png">
+                    <div class="left">
+                        <img src="/stores-assets/images/stores/yamamori-logo1.png" style="width:95px">
                     </div>
                     <div class="left store-title">Yamamori</div>
                     <div class="clear"></div>

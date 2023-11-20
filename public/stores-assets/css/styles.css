@@ -38,7 +38,7 @@ body.stores{
     width: 75px;
 }
 .store-title {
-    font-size: 40px;
+    font-size: 30px;
     margin: 27px 0 0 7px;
     font-weight: bold;
 }
@@ -90,7 +90,7 @@ ul.button-lists li{
     top: 13px;
 }
 .icon-open-table:before {
-    background: url(/stores-assets/images/icons/opentable.png) no-repeat;
+    background: url(/stores-assets/images/icons/opentable1.png) no-repeat;
     content: " ";
     width: 40px;
     height: 40px;
