@@ -25,7 +25,7 @@
                             We’d love to hear how your experience was, it’ll take just a minute.
                         </p>
                         <ul style="padding: 0; list-style: none;"  class="button-lists">
-                            <li><a href="#" class="btn-store icon-google">GOOGLE</a></li>
+                            <li><a href="https://www.google.com/maps/place/Yamamori+South+City/@53.3428365,-6.2672483,17z/data=!4m8!3m7!1s0x48670e9d0149996f:0x6e7330125299477c!8m2!3d53.3428365!4d-6.2646734!9m1!1b1!16s%2Fg%2F1tgh2d73?entry=ttu" class="btn-store icon-google">GOOGLE</a></li>
                             <li><a href="#" class="btn-store icon-open-table">OPEN TABLE</a></li>
                             <li><a href="#" class="btn-store icon-trip-advisor">TRIP ADVISOR</a></li>
                             <li><a href="#" class="btn-store">GET 15% OFF</a></li>
