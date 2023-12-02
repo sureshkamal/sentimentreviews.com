@@ -43,8 +43,8 @@
             </div>
             <div class="row">
                 <div class="social-links">
-                    <a href="https://facebook.com"><img src="/stores-assets/images/icons/facebook.png"> </a>
-                    <a href="https://instagram.com"><img src="/stores-assets/images/icons/instagram.png"> </a>
+                    <a href="https://www.facebook.com/YamamoriDining"><img src="/stores-assets/images/icons/facebook.png"> </a>
+                    <a href="https://www.instagram.com/yamamoridining/"><img src="/stores-assets/images/icons/instagram.png"> </a>
                 </div>
             </div>
             <div class="row">
