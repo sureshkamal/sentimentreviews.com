@@ -409,12 +409,15 @@
 <script src="/wallet-bootstrap/js/script.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51633555-2"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PY250HYDC"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-51633555-2');
+  gtag('config', 'G-4PY250HYDC');
 </script>
 
 </body>
