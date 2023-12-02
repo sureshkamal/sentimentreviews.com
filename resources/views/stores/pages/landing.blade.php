@@ -25,9 +25,9 @@
                             We’d love to hear how your experience was, it’ll take just a minute.
                         </p>
                         <ul style="padding: 0; list-style: none;"  class="button-lists">
-                            <li><a href="https://g.page/r/CXxHmVISMHNuEB0/review" class="btn-store icon-google">GOOGLE</a></li>
-                            <li><a href="#" class="btn-store icon-open-table">OPEN TABLE</a></li>
-                            <li><a href="#" class="btn-store icon-trip-advisor">TRIP ADVISOR</a></li>
+                            <li><a href="https://g.page/r/CSvj_Oj-XuMzEB0/review" class="btn-store icon-google">GOOGLE</a></li>
+                            <li><a href="https://www.opentable.com/r/yamamori-izakaya-japas-and-sake-bar-dublin-2" class="btn-store icon-open-table">OPEN TABLE</a></li>
+                            <li><a href="https://www.tripadvisor.in/UserReviewEdit-g186605-d2486893-Yamamori_Izakaya_Sake_Bar-Dublin_County_Dublin.html" class="btn-store icon-trip-advisor">TRIP ADVISOR</a></li>
                             <li><a href="#" class="btn-store">GET 15% OFF</a></li>
                         </ul>
                     </div>
