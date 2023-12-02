@@ -27,11 +27,13 @@
 <!-- /navigation -->
  @yield('content')
 
-
+ @yield('beforeJs')
     <!-- # JS Plugins -->
     <script src="/wallet-bootstrap/plugins/jquery/jquery.min.js"></script>
     <script src="/wallet-bootstrap/plugins/bootstrap/bootstrap.min.js"></script>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+ @yield('afterJs')
 
 </body>
 </html>

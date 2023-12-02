@@ -3,7 +3,7 @@
     'elementActive' => ''
 ])
 @section('content')
-<div class="container">
+<div class="container" id="stores-landing">
     <div  style="background: url('/stores-assets/images/stores/yamamori.png'), lightgray 50% / cover no-repeat;">
          <div class="bg-landing bg-store-gradient" style="padding:200px 8px 8px">
             <div class="row" >
@@ -28,7 +28,7 @@
                             <li><a href="https://g.page/r/CSvj_Oj-XuMzEB0/review" class="btn-store icon-google">GOOGLE</a></li>
                             <li><a href="https://www.opentable.com/r/yamamori-izakaya-japas-and-sake-bar-dublin-2" class="btn-store icon-open-table">OPEN TABLE</a></li>
                             <li><a href="https://www.tripadvisor.in/UserReviewEdit-g186605-d2486893-Yamamori_Izakaya_Sake_Bar-Dublin_County_Dublin.html" class="btn-store icon-trip-advisor">TRIP ADVISOR</a></li>
-                            <li><a href="#" class="btn-store">GET 15% OFF</a></li>
+                            <li><a href="#" class="btn-store" v-on:click="comingsoonalert()">GET 15% OFF</a></li>
                         </ul>
                     </div>
                 </div>
@@ -55,3 +55,9 @@
    
 </div>
 @endsection
+@section('afterJs')
+    <script src="{{ asset('stores-assets') }}/js/landing.js"></script>
+    @endsection
+
+
+
