@@ -17,6 +17,9 @@ use App\Http\Controllers\StoreController;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/contact-us', function () {
+    return view('contactus');
+});
 Route::get('/{store}', [StoreController::class, 'index'])->name('store.index');
 
 Auth::routes();

@@ -9,8 +9,13 @@
     <meta name="keywords" content="restaurants, reviews, online reviews, hospitality, best restaurants in ireland, best restaurants in dublin, customer service, loyalty, brands">
     <meta name="description" content="Sentiment Reviews is the must have hospitality tool for getting online reviews, key valuable insights & boosting your brand loyalty.We make your customers your raving fans.Our unique & innovative solution, powered by our dashboard we help your business to have a competitive advantage over your competitors.">
     <meta name="author" content="sentimentreviews">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   
   <!-- theme meta -->
   <meta name="theme-name" content="sentimentreviews" />

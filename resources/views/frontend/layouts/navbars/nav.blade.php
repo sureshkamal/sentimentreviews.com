@@ -12,7 +12,9 @@
                     </li>
                     <li class="nav-item "> <a class="nav-link" href="/#howitsworks">How it's works</a>
                     </li>
-                    <li class="nav-item "> <a class="nav-link" href="#whyyouneedthis">Why you need this</a>
+                    <li class="nav-item "> <a class="nav-link" href="/#whyyouneedthis">Why you need this</a>
+                    </li>
+                    <li class="nav-item "> <a class="nav-link" href="/contact-us">Contact Us</a>
                     </li>
                 </ul>
                 <!-- account btn --> <a href="#!" class="btn btn-txt">Log In</a>
