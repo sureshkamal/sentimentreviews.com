@@ -31,7 +31,17 @@
     <!-- # Main Style Sheet -->
     <link rel="stylesheet" href="/wallet-bootstrap/css/style.css?{{time()}}">
 </head>
-
+<style type="text/css">
+    .bg-image:after {
+        content: " ";
+        background: #000;
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        opacity: .4;
+        z-index: 1;
+    }
+</style>
 <body>
 
 <!-- navigation -->
@@ -95,13 +105,102 @@
         <div class="col-sm-12">
             <div style="
                 background: url('/assets/images/contactus/b2.jpeg'); 
-                height: 500px;">
+                height: 500px; position:relative;" class="bg-image">
+                <div class="row">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="block text-center text-lg-start pe-0 pe-xl-5" style="
+                                position: absolute;
+                                bottom: 22px;
+                                margin-left: 30px;
+                                max-width: 500px;
+                                color: #fff;
+                                z-index: 2;
+                            ">
+                          <h1 class="text-capitalize mb-4" style="color: #fff;">Contact Us</h1>
+                          <p class="mb-4">Sentiment Reviews is the must have hospitality tool for getting online reviews, key valuable insights & boosting your brand loyalty.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5 mb-lg-0"></div>
+                </div>
             </div>
         </div>
     </div>
   </div>
 </section>
-
+<section class="" id="contact-form" style="
+                margin: 75px 0;
+    ">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-10">
+                <div class="">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <h1>We are here <br> to support you</h1>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="contact-info">
+                                <h4>We make your customers your raving fans.</h4>
+                                <p>Our unique & innovative solution, powered by our dashboard we help your business to have a competitive advantage over your competitors.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contact-form">
+                                <form action="#!">
+                                    <div class="form-group mb-4 pb-2">
+                                        <label for="fullname" class="form-label">Name</label>
+                                        <input type="text" class="form-control shadow-none" id="fullname">
+                                    </div>
+                                    <div class="form-group mb-4 pb-2">
+                                        <label for="emailaddress" class="form-label">Email</label>
+                                        <input type="email" class="form-control shadow-none" id="emailaddress">
+                                    </div>
+                                    <div class="form-group mb-4 pb-2">
+                                        <label for="phonenumber" class="form-label">Phone</label>
+                                        <input type="tel" class="form-control shadow-none" id="phonenumber">
+                                    </div>
+                                    <div class="form-group mb-4 pb-2">
+                                        <label for="companyname" class="form-label">Company Name</label>
+                                        <input type="text" class="form-control shadow-none" id="companyname">
+                                    </div>
+                                    <div class="form-group mb-4 pb-2">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control shadow-none" id="message" rows="3"></textarea>
+                                    </div>
+                                    <button class="btn btn-primary w-100" type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-5 mt-lg-0">
+                            <div class="contact-info">
+                                <div class="block mt-0">
+                                    <h4 class="h5">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </h4>
+                                    <div class="content">
+                                        Sentiment Reviews, 50 Anley Court Lucan, Dublin, K78 D260, Ireland
+                                    </div>
+                                </div>
+                                <div class="block mt-4">
+                                    <h4 class="h5"><i class="fas fa-envelope"></i></h4>
+                                    <div class="content">
+                                        <a href="mailto:support@sentiment-reviews.com">support@sentiment-reviews.com</a>
+                                    </div>
+                                </div>
+                                <div class="block mt-4">
+                                    <h4 class="h5"><i class="fas fa-phone-alt"></i></h4>
+                                    <div class="content">
+                                        <a href="tel:+353833596733">+353 833596733</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
  @include('frontend.layouts.includes.footer')
 
