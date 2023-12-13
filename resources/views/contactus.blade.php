@@ -44,6 +44,10 @@
     .form-group label{
         display: none;
     }
+    footer{
+        border-top: 2px solid #ccc;
+        padding-top: 50px;
+    }
 </style>
 <body>
 
