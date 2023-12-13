@@ -142,6 +142,13 @@
             <div class="col-lg-10">
                 <div class="">
                     <div class="row">
+                        <div>
+                            @if(session('success'))
+                                <div class="alert alert-success" style="color: green;border: 1px solid green;text-align: center;margin: 10px; 0">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+                        </div>
                         <div class="col-lg-6 mb-4">
                             <h1>We are here <br> to support you</h1>
                         </div>
@@ -153,26 +160,36 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="contact-form">
-                                <form action="#!" class="row">
+                                <form action="{{ url('/contact') }}" method="post" class="row">
+                                    @csrf
                                     <div class="form-group mb-4 pb-2 col-lg-6">
                                         <label for="fullname" class="form-label">Name</label>
-                                        <input type="text" class="form-control shadow-none" id="fullname" placeholder="Name">
+                                        <input name="name" type="text" class="form-control shadow-none" id="fullname" placeholder="Name" required>
+                                        @error('name')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="form-group mb-4 pb-2 col-lg-6">
                                         <label for="emailaddress" class="form-label">Email</label>
-                                        <input type="email" class="form-control shadow-none" id="emailaddress" placeholder="Email">
+                                        <input name="email"  type="email" class="form-control shadow-none" id="emailaddress" placeholder="Email" required>
+                                         @error('email')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="form-group mb-4 pb-2 col-lg-6">
                                         <label for="phonenumber" class="form-label">Phone</label>
-                                        <input type="tel" class="form-control shadow-none" id="phonenumber" placeholder="Phone">
+                                        <input name="phonenumber"   type="tel" class="form-control shadow-none" id="phonenumber" placeholder="Phone"> 
                                     </div>
                                     <div class="form-group mb-4 pb-2 col-lg-6">
                                         <label for="companyname" class="form-label">Company Name</label>
-                                        <input type="text" class="form-control shadow-none" id="companyname" placeholder="Company Name">
+                                        <input name="companyname" type="text" class="form-control shadow-none" id="companyname" placeholder="Company Name">
                                     </div>
                                     <div class="form-group mb-4 pb-2">
                                         <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control shadow-none" id="message" rows="3" placeholder="Message"></textarea>
+                                        <textarea  name="message" class="form-control shadow-none" id="message" rows="3" placeholder="Message" required></textarea>
+                                         @error('message')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <button class="btn btn-primary w-100" type="submit">Submit</button>
                                 </form>

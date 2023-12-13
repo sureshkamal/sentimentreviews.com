@@ -20,6 +20,8 @@ Route::get('/', function () {
 Route::get('/contact-us', function () {
     return view('contactus');
 });
+Route::post('/contact', [HomeController::class, 'submitForm']);
+
 Route::get('/{store}', [StoreController::class, 'index'])->name('store.index');
 
 Auth::routes();
