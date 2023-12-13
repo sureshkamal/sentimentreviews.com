@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <title>{{ __('Sentiment Reviews') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-    <meta name="description" content="{{ __('Sentiment Reviews') }}">
+    <meta name="keywords" content="restaurants, reviews, online reviews, hospitality, best restaurants in ireland, best restaurants in dublin, customer service, loyalty, brands">
+    <meta name="description" content="Sentiment Reviews is the must have hospitality tool for getting online reviews, key valuable insights & boosting your brand loyalty.We make your customers your raving fans.Our unique & innovative solution, powered by our dashboard we help your business to have a competitive advantage over your competitors.">
     <meta name="author" content="sentimentreviews">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
