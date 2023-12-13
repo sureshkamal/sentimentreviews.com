@@ -41,6 +41,9 @@
         opacity: .4;
         z-index: 1;
     }
+    .form-group label{
+        display: none;
+    }
 </style>
 <body>
 
@@ -146,26 +149,26 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="contact-form">
-                                <form action="#!">
-                                    <div class="form-group mb-4 pb-2">
+                                <form action="#!" class="row">
+                                    <div class="form-group mb-4 pb-2 col-lg-6">
                                         <label for="fullname" class="form-label">Name</label>
-                                        <input type="text" class="form-control shadow-none" id="fullname">
+                                        <input type="text" class="form-control shadow-none" id="fullname" placeholder="Name">
                                     </div>
-                                    <div class="form-group mb-4 pb-2">
+                                    <div class="form-group mb-4 pb-2 col-lg-6">
                                         <label for="emailaddress" class="form-label">Email</label>
-                                        <input type="email" class="form-control shadow-none" id="emailaddress">
+                                        <input type="email" class="form-control shadow-none" id="emailaddress" placeholder="Email">
                                     </div>
-                                    <div class="form-group mb-4 pb-2">
+                                    <div class="form-group mb-4 pb-2 col-lg-6">
                                         <label for="phonenumber" class="form-label">Phone</label>
-                                        <input type="tel" class="form-control shadow-none" id="phonenumber">
+                                        <input type="tel" class="form-control shadow-none" id="phonenumber" placeholder="Phone">
                                     </div>
-                                    <div class="form-group mb-4 pb-2">
+                                    <div class="form-group mb-4 pb-2 col-lg-6">
                                         <label for="companyname" class="form-label">Company Name</label>
-                                        <input type="text" class="form-control shadow-none" id="companyname">
+                                        <input type="text" class="form-control shadow-none" id="companyname" placeholder="Company Name">
                                     </div>
                                     <div class="form-group mb-4 pb-2">
                                         <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control shadow-none" id="message" rows="3"></textarea>
+                                        <textarea class="form-control shadow-none" id="message" rows="3" placeholder="Message"></textarea>
                                     </div>
                                     <button class="btn btn-primary w-100" type="submit">Submit</button>
                                 </form>
