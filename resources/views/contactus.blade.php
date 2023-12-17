@@ -115,13 +115,15 @@
                 height: 500px; position:relative;" class="bg-image">
                 <div class="row">
                     <div class="col-lg-6 mb-5 mb-lg-0">
-                        <div class="block text-center text-lg-start pe-0 pe-xl-5" style="
+                        <div class="block text-start text-lg-start pe-xl-5" style="
                                 position: absolute;
                                 bottom: 22px;
-                                margin-left: 30px;
                                 max-width: 500px;
                                 color: #fff;
+                                text-align: center;
+                                padding: 30px;
                                 z-index: 2;
+                                width: 100%;
                             ">
                           <h1 class="text-capitalize mb-4" style="color: #fff;">Contact Us</h1>
                           <p class="mb-4">Sentiment Reviews is the must have hospitality tool for getting online reviews, key valuable insights & boosting your brand loyalty.</p>
@@ -191,28 +193,34 @@
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
-                                    <button class="btn btn-primary w-100" type="submit">Submit</button>
+                                    <!-- <button class="btn btn-primary w-100" type="submit">Submit</button> -->
+                                    <div>
+                                        <button class="input-group-text border-0 bg-primary br-radius-5" type="submit" name="subscribe"
+                                          aria-label="Subscribe for Newsletter">
+                                           Submit <i class="fas fa-arrow-right ms-3"></i>
+                                         </button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
-                        <div class="col-lg-6 mt-5 mt-lg-0">
+                        <div class="col-lg-6 mt-5 mt-lg-0 icon-circle">
                             <div class="contact-info">
                                 <div class="block mt-0">
                                     <h4 class="h5">
-                                        <i class="fas fa-map-marker-alt"></i>
+                                        <i class="fas fa-map-marker-alt rounded-circle"></i>
                                     </h4>
                                     <div class="content">
                                         Sentiment Reviews, 50 Anley Court Lucan, Dublin, K78 D260, Ireland
                                     </div>
                                 </div>
                                 <div class="block mt-4">
-                                    <h4 class="h5"><i class="fas fa-envelope"></i></h4>
+                                    <h4 class="h5"><i class="fas fa-envelope rounded-circle"></i></h4>
                                     <div class="content">
                                         <a href="mailto:support@sentiment-reviews.com">support@sentiment-reviews.com</a>
                                     </div>
                                 </div>
                                 <div class="block mt-4">
-                                    <h4 class="h5"><i class="fas fa-phone-alt"></i></h4>
+                                    <h4 class="h5"><i class="fas fa-phone-alt rounded-circle"></i></h4>
                                     <div class="content">
                                         <a href="tel:+353833596733">+353 833596733</a>
                                     </div>
