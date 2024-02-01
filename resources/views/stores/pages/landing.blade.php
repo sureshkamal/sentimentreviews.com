@@ -36,6 +36,8 @@
                             <li><a href="https://g.page/r/CSvj_Oj-XuMzEB0/review" class="btn-store icon-google">GOOGLE</a></li>
                             <li><a href="https://www.opentable.com/r/yamamori-izakaya-japas-and-sake-bar-dublin-2" class="btn-store icon-open-table">OPEN TABLE</a></li>
                             <li><a href="https://www.tripadvisor.in/UserReviewEdit-g186605-d2486893-Yamamori_Izakaya_Sake_Bar-Dublin_County_Dublin.html" class="btn-store icon-trip-advisor">TRIP ADVISOR</a></li>
+                            <li><a href="yamamori/nps" class="btn-store icon-trip-advisor">NPS Review</a></li>
+
                             <!-- <li><a href="#" class="btn-store" v-on:click="comingsoonalert()">REWARDS</a></li> -->
                         </ul>
                     </div>
