@@ -73,18 +73,75 @@
       background-color: #4CAF50;
       transition: width 0.5s ease;
     }
+    .question{
+        padding: 60px 0;
+    }
+    #nps-landing input[type="radio"]{
 
-    .question {
+    }
+
+
+/*  radio button   */
+
+.radio-button {
+      display: none;
+    }
+
+   .custom-radio {
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    width: 50%;
+    padding: 7px;
+    background: #292828;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+    .custom-radio input {
+      position: absolute;
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-      padding: 50px 0;
+      cursor: pointer;
     }
 
-    .question.active {
-      opacity: 1;
-      transform: translateY(0);
+    .radio-label {
+    padding: 1px 7px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #000;
+    border: 0.1px solid;
+    margin-right: 10px;
+}
+
+    .custom-radio input:checked + .radio-label {
+      background-color: #fff;
+      color: #000;
+      border-color: #000;
     }
+
+    .tick-mark {
+      margin-left: 5px;
+      font-weight: bold;
+    }
+
+    .custom-radio input:checked + .radio-label::after {
+      content: '\2713'; /* Checkmark character */
+      font-size: 16px;
+      margin-left: 5px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    
+
+
+
+   
   </style>
 <!-- 
 <div class="progress-container">
@@ -125,13 +182,39 @@
     </div>
     <div class="sec2 question" id="question2">
         <div class="heading">
-            <span>1&rarr;</span><span>Hey there! What is your name?</span>
+            <span>2&rarr;</span><span>Select the venue you visited today?*</span>
         </div>
         <div>
             <img src="/assets/images/nps/1.png">
         </div>
         <div>
-            <input type="" name="" placeholder="Type your answer here...">
+            <div class="custom-control custom-radio">
+    <input type="radio" id="radioA" name="radioGroup" class="radio-button" placeholder="A">
+    <label class="radio-label" for="radioA">A</label><span>North City</span><span class="tick-mark"></span>
+  </div>
+
+  <div class="custom-control custom-radio">
+    <input type="radio" id="radioB" name="radioGroup" class="radio-button">
+    <label class="radio-label" for="radioB">B</label><span>North City</span><span class="tick-mark"></span>
+  </div>
+
+  <div class="custom-control custom-radio">
+    <input type="radio" id="radioC" name="radioGroup" class="radio-button">
+    <label class="radio-label" for="radioC">C</label><span>North City</span><span class="tick-mark"></span>
+  </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Yamamori - Izakaya & Sake bar
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                Yamamori - North City
+              </label>
+            </div>
         </div>
         <div>
             <button class="buttonOrange">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
@@ -263,53 +346,6 @@
 @endsection
 @section('afterJs')
     <script src="{{ asset('stores-assets') }}/js/landing.js"></script>
-
-<script>
-  // Track the current question index
-  let currentQuestionIndex = 0;
-
-  // Update progress bar and show next question
-  function showNextQuestion() {
-    currentQuestionIndex++;
-    const progressBar = document.getElementById('myProgressBar');
-    const question = document.getElementById('question' + currentQuestionIndex);
-
-
-    // Update progress bar width
-    progressBar.style.width = (currentQuestionIndex / 10) * 100 + '%';
-
-    // Show next question
-    if (question) {
-        var elements = document.getElementsByClassName('question');
-
-      // Loop through the elements and remove the class
-      for (var i = 0; i < elements.length; i++) {
-        elements[i].classList.remove('active');
-      }
-
-      question.classList.add('active');
-      scrollToSection('question' + currentQuestionIndex);
-    }
-  }
-
-  function scrollToSection(sectionId) {
-    // const section = document.getElementById(sectionId);
-    window.location.href="#"+sectionId;
-
-    // if (section) {
-    //   section.scrollIntoView({ behavior: 'smooth' });
-    // }
-  }
-
-  // Attach the scroll event listener
-  // window.addEventListener('scroll', handleScroll);
-  window.onscroll = function() {showNextQuestion()};
-
-  // Initial call to show the first question
-  showNextQuestion();
-</script>
-
-    @endsection
-
-
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
