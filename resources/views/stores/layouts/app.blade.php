@@ -20,6 +20,11 @@
     <!-- # Main Style Sheet -->
     <link rel="stylesheet" href="/wallet-bootstrap/css/style.css?{{time()}}">
     <link rel="stylesheet" href="/stores-assets/css/styles.css?{{time()}}">
+    <style type="text/css">
+        body{
+                max-width: 390px;
+        }
+    </style>
 </head>
 
 <body class="stores">

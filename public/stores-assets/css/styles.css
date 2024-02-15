@@ -117,3 +117,110 @@ ul.button-lists li{
     width: 118px;
     margin: 0 auto;
 }
+/* Styles for the button */
+.floating-button {
+	position: absolute;
+    border: none;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: #dc3545;
+    color: #fff;
+    transition: bottom 0.3s ease;
+}
+
+.floating-button-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Hover effect */
+.floating-button:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Adjusting z-index to ensure it's above other content */
+.floating-button-container {
+    position: relative;
+    z-index: 1000;
+    height: 100px;	
+}
+/*popup styles*/
+
+.popup {
+    position: fixed;
+    bottom: -75%; /* Initial position, hides the popup */
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+    transition: bottom 0.3s ease;
+    z-index: 9999; /* Ensure the popup is above other content */
+    padding: 20px;
+    box-sizing: border-box;
+    height: 75%;
+    border-radius: 15px 15px 0 0;
+    color: #fff;
+}
+
+/* Show popup animation */
+.popup.active {
+    bottom: 0;
+}
+.popup .close{
+	border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: none;
+    border: none;
+    background-color: rgb(255 255 255 / 20%);
+    left: 92%;
+    position: relative;
+    color: #fff;
+    font-weight: 100;
+}
+
+/* Styles for the input field */
+    .popup .input-container {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .popup input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #333;
+	    box-shadow: none;
+	    border: none;
+	    color: #fff;
+    }
+    .input-field:focus-visible{
+    	border: none;
+    	outline: none;
+    }
+
+    .popup .input-label {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        pointer-events: none; /* Ensure the label doesn't interfere with input focus */
+        transition: top 0.3s, font-size 0.3s, color 0.3s;
+    }
+
+    .popup .input-field:focus + .popup .input-label {
+        top: 10px;
+        font-size: 12px;
+        color: #007bff;
+    }
+
+    .input-label.active {
+	    top: -50%;
+	    transform: translateY(-50%);
+	    pointer-events: none;
+	}
