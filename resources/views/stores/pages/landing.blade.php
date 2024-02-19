@@ -41,7 +41,9 @@
                             <!-- <li><a href="#" class="btn-store" v-on:click="comingsoonalert()">REWARDS</a></li> -->
                         </ul>
                         <div class="floating-button-container">
-                            <button class="floating-button btn-store" id="floating-button" onclick="togglePopup()">CLAIM YOUR REWARDS</button>
+
+                            <!-- <button class="floating-button btn-store" id="floating-button" onclick="togglePopup()">CLAIM YOUR REWARDS</button> -->
+                            <button class="floating-button btn-store" id="stickyButton" onclick="togglePopup()">CLAIM YOUR REWARDS</button>
                         </div>
                     </div>
                 </div>
@@ -178,13 +180,25 @@
 <div class="popup" id="popup">
     <button class="close" onclick="closePopup()">&#x2715;</button>
 
-    <div class="input-container">
+    <!-- <div class="input-container">
         <input type="text" id="nameInput" class="input-field" required>
         <label for="nameInput" class="input-label">Enter Name</label>
     </div>
     <div class="input-container">
         <input type="email" id="emailInput" class="input-field" required>
         <label for="emailInput" class="input-label">Enter Email</label>
+    </div> -->
+
+    <div class="input-container">
+        <label for="nameInput" class="input-label">Enter Name</label>
+        <input type="text" id="nameInput" class="input-field" required>
+    </div>
+    <div class="input-container">
+        <label for="emailInput" class="input-label">Enter Email</label>
+        <input type="email" id="emailInput" class="input-field" required>
+    </div>
+    <div class="floating-button-container">
+        <button class="floating-button btn-store" id="floating-button" onclick="writeReview()">NPS REVIEW</button>
     </div>
 
 </div>
@@ -192,20 +206,22 @@
 @section('afterJs')
     <script src="{{ asset('stores-assets') }}/js/landing.js"></script>
     <script type="text/javascript">
-        window.addEventListener('scroll', function() {
-            var button = document.getElementById('floating-button');
-            var contentHeight = document.querySelector('.container').offsetHeight;
-            var screenHeight = window.innerHeight;
-            var scrollPosition = window.scrollY || window.pageYOffset;
+        // window.addEventListener('scroll', function() {
+        //     var button = document.getElementById('floating-button');
+        //     var contentHeight = document.querySelector('.container').offsetHeight;
+        //     var screenHeight = window.innerHeight;
+        //     var scrollPosition = window.scrollY || window.pageYOffset;
             
-            if (scrollPosition > contentHeight - screenHeight) {
-                button.classList.add('floating-button-fixed');
-            } else {
-                button.classList.remove('floating-button-fixed');
-            }
-        });
+        //     if (scrollPosition > contentHeight - screenHeight) {
+        //         button.classList.add('floating-button-fixed');
+        //     } else {
+        //         button.classList.remove('floating-button-fixed');
+        //     }
+        // });
 
-        function togglePopup() {
+
+
+    function togglePopup() {
         var popup = document.getElementById('popup');
         popup.classList.toggle('active');
     }
@@ -215,28 +231,50 @@
         popup.classList.remove('active');
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var inputField = document.getElementById('nameInput');
-        var inputLabel = inputField.nextElementSibling; // Get the label next to the input field
-
-        // Add event listener for focus
-        inputField.addEventListener('focus', function() {
-            inputLabel.classList.add('active');
-        });
-
-        // Add event listener for blur
-        inputField.addEventListener('blur', function() {
-            if (inputField.value === '') {
-                inputLabel.classList.remove('active');
-            }
-        });
-
-        // Check if input field already has value on page load
-        if (inputField.value !== '') {
-            inputLabel.classList.add('active');
+        function writeReview() {
+            window.location.href = 'yamamori/nps';
         }
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     var inputFields = document.getElementsByClassName('input-field');
 
-     });
+    //     for (var i = inputFields.length - 1; i >= 0; i--) {
+    //         var inputField = inputFields[i];
+        
+    //         // var inputField = document.getElementById('nameInput');
+    //         var inputLabel = inputField.nextElementSibling; // Get the label next to the input field
+
+    //         // Add event listener for focus
+    //         inputField.addEventListener('focus', function() {
+    //             inputLabel.classList.add('active');
+    //         });
+
+    //         // Add event listener for blur
+    //         inputField.addEventListener('blur', function() {
+    //             if (inputField.value === '') {
+    //                 inputLabel.classList.remove('active');
+    //             }
+    //         });
+
+    //         // Check if input field already has value on page load
+    //         if (inputField.value !== '') {
+    //             inputLabel.classList.add('active');
+    //         }
+    //     }
+
+    //  });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var stickyButton = document.getElementById('stickyButton');
+
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset < stickyButton.offsetTop - window.innerHeight) {
+                    stickyButton.style.position = 'fixed';
+                } else {
+                    stickyButton.style.position = 'relative';
+                }
+            });
+        });
+
 </script>
 @endsection
 

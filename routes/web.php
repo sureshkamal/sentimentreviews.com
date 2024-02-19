@@ -24,6 +24,7 @@ Route::post('/contact', [HomeController::class, 'submitForm']);
 
 Route::get('/{store}', [StoreController::class, 'index'])->name('store.index');
 Route::get('/{store}/nps', [StoreController::class, 'nps'])->name('store.nps');
+Route::get('/{store}/thank-you', [StoreController::class, 'npsThanks'])->name('store.npsThanks');
 
 Auth::routes();
 

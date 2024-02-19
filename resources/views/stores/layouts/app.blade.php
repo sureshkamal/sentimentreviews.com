@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/stores-assets/css/styles.css?{{time()}}">
     <style type="text/css">
         body{
-                max-width: 390px;
+                max-width: 450px;
         }
     </style>
 </head>

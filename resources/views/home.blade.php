@@ -55,19 +55,35 @@
             <div class="contact-box">
                 <h2 class="title">Contact Us</h2>
                 <p>Drop us an email and we will get back to you as soon as we can<p>
-                
-                <form>
+
+                @if(session('success'))
+                    <div class="alert alert-success" style="color: green;border: 1px solid green;text-align: center;margin: 10px; 0">
+                        {{ session('success') }}
+                    </div>
+                @endif
+        
+                <form action="{{ url('/contact') }}" method="post" class="row">
+                    @csrf
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Your Name" />
+                            <input name="name" type="text" class="form-control" placeholder="Your Name" />
+                            @error('name')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         
                         <div class="col-md-6 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Your Email" />
+                            <input name="email" type="text" class="form-control" placeholder="Your Email" />
+                             @error('email')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         
                         <div class="col-md-12 col-sm-12">
-                            <textarea class="form-control" rows="6" placeholder="Your Message"></textarea>
+                            <textarea name="message" class="form-control" rows="6" placeholder="Your Message"></textarea>
+                             @error('message')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         
                         <div class="col-md-12 col-sm-12">

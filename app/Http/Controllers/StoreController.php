@@ -28,4 +28,9 @@ class StoreController extends Controller
     {
         return view('stores.pages.nps');
     }
+
+    public function npsThanks(Request $request, string $store)
+    {
+        return view('stores.pages.npsThanks');
+    }
 }

@@ -60,21 +60,19 @@
 
 
 
-
-
-    .progress-container {
+    #myProgress {
       width: 100%;
-      height: 10px;
       background-color: #ddd;
     }
 
-    .progress-bar {
-      height: 100%;
-      background-color: #4CAF50;
-      transition: width 0.5s ease;
+    #myBar {
+      width: 1%;
+      height: 10px;
+      background-color: rgb(255 51 0 / 74%);
     }
+
     .question{
-        padding: 60px 0;
+        padding: 40px 0;
     }
     #nps-landing input[type="radio"]{
 
@@ -138,34 +136,22 @@
     }
 
     
-
-
+/*  new styles  */
+.question{
+    display: none;
+}
+#question1{
+    display: block;
+}
 
    
   </style>
-<!-- 
-<div class="progress-container">
-  <div class="progress-bar" id="myProgressBar" style="width: 0;"></div>
-</div>
 
-<div class="question-container" style="height: 1000px;">
-  <div class="question" id="question1">
-    <h2>Question 1</h2>
-    <p>Your question details go here.</p>
-  </div>
-  <div class="question" id="question2">
-    <h2>Question 2</h2>
-    <p>Your question details go here.</p>
-  </div>
-</div>
-
- -->
-
-<div class="progress-container">
-  <div class="progress-bar" id="myProgressBar">0%</div>
+<div id="myProgress">
+  <div id="myBar"></div>
 </div>
 <div class="container bgBlack" id="nps-landing">
-    <div class="sec1 question" id="question1">
+    <div class="sec1 question" id="question1" data-id="1">
         <div class="heading">
             <span>1&rarr;</span><span>Hey there! What is your name?</span>
         </div>
@@ -176,11 +162,11 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(2)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
         </div>
         
     </div>
-    <div class="sec2 question" id="question2">
+    <div class="sec2 question" id="question2" data-id="2">
         <div class="heading">
             <span>2&rarr;</span><span>Select the venue you visited today?*</span>
         </div>
@@ -189,41 +175,29 @@
         </div>
         <div>
             <div class="custom-control custom-radio">
-    <input type="radio" id="radioA" name="radioGroup" class="radio-button" placeholder="A">
-    <label class="radio-label" for="radioA">A</label><span>North City</span><span class="tick-mark"></span>
-  </div>
-
-  <div class="custom-control custom-radio">
-    <input type="radio" id="radioB" name="radioGroup" class="radio-button">
-    <label class="radio-label" for="radioB">B</label><span>North City</span><span class="tick-mark"></span>
-  </div>
-
-  <div class="custom-control custom-radio">
-    <input type="radio" id="radioC" name="radioGroup" class="radio-button">
-    <label class="radio-label" for="radioC">C</label><span>North City</span><span class="tick-mark"></span>
-  </div>
-
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Yamamori - Izakaya & Sake bar
-              </label>
+                <input type="radio" id="radioA" name="radioGroup" class="radio-button" placeholder="A">
+                <label class="radio-label" for="radioA">A</label><span>North City</span><span class="tick-mark"></span>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-              <label class="form-check-label" for="flexRadioDefault2">
-                Yamamori - North City
-              </label>
+
+            <div class="custom-control custom-radio">
+                <input type="radio" id="radioB" name="radioGroup" class="radio-button">
+                <label class="radio-label" for="radioB">B</label><span>North City</span><span class="tick-mark"></span>
             </div>
+
+            <div class="custom-control custom-radio">
+                <input type="radio" id="radioC" name="radioGroup" class="radio-button">
+                <label class="radio-label" for="radioC">C</label><span>North City</span><span class="tick-mark"></span>
+            </div>
+            
         </div>
         <div>
-            <button class="buttonOrange">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(3)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
         </div>
         
     </div>
-    <div class="sec3 question" id="question3">
+    <div class="sec3 question" id="question3" data-id="3">
         <div class="heading">
-            <span>1&rarr;</span><span>Hey there! What is your name?</span>
+            <span>3&rarr;</span><span>Hey there! What is your name?</span>
         </div>
         <div>
             <img src="/assets/images/nps/1.png">
@@ -232,13 +206,13 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(4)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
         </div>
         
     </div>
-    <div class="sec4 question" id="question4">
+    <div class="sec4 question" id="question4" data-id="4">
         <div class="heading">
-            <span>1&rarr;</span><span>Hey there! What is your name?</span>
+            <span>4&rarr;</span><span>Hey there! What is your name?</span>
         </div>
         <div>
             <img src="/assets/images/nps/1.png">
@@ -247,13 +221,13 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(5)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
         </div>
         
     </div>
-    <div class="sec5 question" id="question5">
+    <div class="sec5 question" id="question5" data-id="5">
         <div class="heading">
-            <span>1&rarr;</span><span>Hey there! What is your name?</span>
+            <span>5&rarr;</span><span>Hey there! What is your name?</span>
         </div>
         <div>
             <img src="/assets/images/nps/1.png">
@@ -262,13 +236,13 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(6)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
         </div>
         
     </div>
-    <div class="sec6 question" id="question6">
+    <div class="sec6 question" id="question6" data-id="6">
         <div class="heading">
-            <span>1&rarr;</span><span>Hey there! What is your name?</span>
+            <span>6&rarr;</span><span>Hey there! What is your name?</span>
         </div>
         <div>
             <img src="/assets/images/nps/1.png">
@@ -277,13 +251,13 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(7)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
         </div>
         
     </div>
-    <div class="sec7 question" id="question7">
+    <div class="sec7 question" id="question7" data-id="7">
         <div class="heading">
-            <span>1&rarr;</span><span>Hey there! What is your name?</span>
+            <span>7&rarr;</span><span>Hey there! What is your name?</span>
         </div>
         <div>
             <img src="/assets/images/nps/1.png">
@@ -292,13 +266,13 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(8)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
         </div>
         
     </div>
-    <div class="sec8 question" id="question8">
+    <div class="sec8 question" id="question8" data-id="8">
         <div class="heading">
-            <span>1&rarr;</span><span>Hey there! What is your name?</span>
+            <span>8&rarr;</span><span>Hey there! What is your name?</span>
         </div>
         <div>
             <img src="/assets/images/nps/1.png">
@@ -307,13 +281,13 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(9)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
         </div>
         
     </div>
-    <div class="sec9 question" id="question9">
+    <div class="sec9 question" id="question9" data-id="9">
         <div class="heading">
-            <span>1&rarr;</span><span>Hey there! What is your name?</span>
+            <span>9&rarr;</span><span>Hey there! What is your name?</span>
         </div>
         <div>
             <img src="/assets/images/nps/1.png">
@@ -322,13 +296,13 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(10)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
         </div>
         
     </div>
-    <div class="sec10 question" id="question10">
+    <div class="sec10 question" id="question10" data-id="10">
         <div class="heading">
-            <span>1&rarr;</span><span>Hey there! What is your name?</span>
+            <span>10&rarr;</span><span>Hey there! What is your name?</span>
         </div>
         <div>
             <img src="/assets/images/nps/1.png">
@@ -337,7 +311,7 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(0)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
         </div>
         
     </div>
@@ -349,3 +323,36 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+<script type="text/javascript">
+
+    var step = 0;
+    var width = 1;
+
+    function next(goto) {
+        progress();
+        $(".question").hide();
+        $("#question"+goto).show();
+        if(!goto){
+            window.location.href = 'thank-you';
+        }
+    }
+
+    function progress() {
+       if(step < 10){
+        var elem = document.getElementById("myBar");
+        
+        step++;
+        var id = setInterval(frame, 10);
+        function frame() {
+          if (width >= step*10) {
+            clearInterval(id);
+            i = 0;
+          } else {
+            width++;
+            elem.style.width = width + "%";
+          }
+        }
+      }
+    }
+
+</script>

@@ -204,12 +204,12 @@ ul.button-lists li{
     	outline: none;
     }
 
-    .popup .input-label {
+    /*.popup .input-label {
         position: absolute;
         top: 50%;
         left: 10px;
         transform: translateY(-50%);
-        pointer-events: none; /* Ensure the label doesn't interfere with input focus */
+        pointer-events: none; 
         transition: top 0.3s, font-size 0.3s, color 0.3s;
     }
 
@@ -223,4 +223,17 @@ ul.button-lists li{
 	    top: -50%;
 	    transform: translateY(-50%);
 	    pointer-events: none;
-	}
+	}*/
+
+
+/* sticky button	*/
+#stickyButton {
+    position: fixed;
+    bottom: 0; /* Adjust as needed */
+    left: 0; /* Adjust as needed */
+/*    display: none; /* Initially hide the button */*/
+}
+
+.content {
+    /* Styles for your content */
+}
