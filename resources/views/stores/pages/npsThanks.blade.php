@@ -1,55 +1,69 @@
-@extends('stores.layouts.nps', [
+@extends('stores.layouts.app', [
     'class' => 'landing-page',
     'elementActive' => ''
 ])
 @section('content')
 <style type="text/css">
-    body{
-        background: #000;
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    .nps .container {
-        width: 100%;
-        max-width: 720px;
-        margin: 0px auto;
-    }
     .bgBlack{
-        background: #000;
         color: #fff;
-        width: 100%;
     }
-    .buttonOrange{
-        background: rgba(255, 51, 0,1);
-        color: #fff;
-        padding: 5px 20px;
-        font-size: 18px;
-        border-radius: 4px;
-        border: none;
-        font-weight: bold;
+    .bg-landing{
+        height: auto;
     }
-    #nps-landing{
-        padding: 0;
-    }
-    #nps-landing img{
-        max-width: 350px;
-        margin: 40px 0;
-    }
-  
+</style>
+<div class="container" id="stores-landing">
+    <div  style="background: url('/stores-assets/images/stores/yamamori.png'), lightgray 50% / cover no-repeat;">
+         <div class="bg-landing bg-store-gradient pb-5" style="padding:150px 8px 8px">
+            <div class="row" >
+                <div class="col-sm-12">
+                    <div>
+                        <img src="/stores-assets/images/stores/yamamori-logo3.png" style="width: 84%;display: block;margin: auto;">
+                    </div>
+                    <div>
+                        <h4 style="
+                            color: #fff;
+                            text-align: center;
+                            margin-top: 10px;
+                        ">Izakaya Japas & Sake Bar</h4>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                 <!-- <div class="col-sm-8">
+                    <h1 style="margin-top:35px; margin-left:4px">Yamamori</h1>
+                </div> -->
+            </div>  
 
-   
-  </style>
-
-<div id="myProgress">
-  <div id="myBar"></div>
-</div>
-<div class="container bgBlack" id="nps-landing">
-    <div class="text-center">
+<div class="container bgBlack mt-5" id="nps-landing">
+    <div class="text-center ps-5 pe-5">
         <img src="/stores-assets/images/icons/thank-you.svg" width="120">
         <p>Thanks for your feedback. Please check the mail to view the reward you earned!!</p>
     </div>
    
 </div>
+
+            <div class="row">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/YamamoriDining"><img src="/stores-assets/images/icons/facebook.png"> </a>
+                    <a href="https://www.instagram.com/yamamoridining/"><img src="/stores-assets/images/icons/instagram.png"> </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="https://sentiment-reviews.com" style="width: 100%;
+                    display: block;
+                    text-align: center;
+                    margin-top: 10px;
+                    color: #fff;">
+                        www.sentiment-reviews.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+
 @endsection
 @section('afterJs')
     <script src="{{ asset('stores-assets') }}/js/landing.js"></script>
