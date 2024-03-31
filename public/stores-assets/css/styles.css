@@ -2,6 +2,7 @@ body.stores{
 	width: 100%;
 	height: auto;
 	font-family: "Figtree", Helvetica;
+    /* font-family: sans-serif; */
 }
 .stores .container{
 	max-width: 390px;
@@ -10,8 +11,12 @@ body.stores{
     padding: 0px;
 }
 .bg-landing{
-	height: 870px;
+	/* height: 870px; */
+    padding-top: 320px;
 	flex-shrink: 0;
+}
+.bg-dark{
+    background-color: #212121 !important;
 }
 .bg-store-gradient{
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.98) 51.04%, #000 100%);
@@ -53,13 +58,19 @@ body.stores{
 .font-inter{
 	font-family: "Inter", Helvetica;
 }
+.store-heading{
+    color: #fdfdfd;
+    text-align: center;
+    margin-top: 10px;
+}
 .store-description{
-	color: #FFF;
+	color: #9c9c9c;
 	font-family: Inter;
 	font-size: 13px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: normal;
+    text-align: center;
+    line-height: 18px;
 }
 .btn-store{
 	/*width: 310px;
@@ -231,9 +242,10 @@ ul.button-lists li{
     position: fixed;
     bottom: 0; /* Adjust as needed */
     left: 0; /* Adjust as needed */
-/*    display: none; /* Initially hide the button */*/
+/*    display: none; /* Initially hide the button */
 }
-
-.content {
-    /* Styles for your content */
+.store-logo{
+    width: 25%;
+    display: block;
+    margin: auto;
 }

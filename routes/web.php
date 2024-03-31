@@ -14,9 +14,32 @@ use App\Http\Controllers\StoreController;
 |
 */
 
+
+
 Route::get('/', function () {
     return view('home');
 });
+
+Route::prefix('admin')->group(function () {
+	Route::prefix('login')->group(function () {
+
+		Route::get('/', function () {
+	        return view('admin.login');		
+	    });
+
+		Route::post('/auth', [AdminController::class, 'loginAuthenticate']);
+
+    });
+
+    Route::get('/dashboard', function () {
+        return view('admin.index');		
+    });
+    Route::get('/stores', function () {
+        return view('admin.stores');		
+    });
+    
+});
+
 Route::get('/contact-us', function () {
     return view('contactus');
 });
@@ -25,6 +48,9 @@ Route::post('/contact', [HomeController::class, 'submitForm']);
 Route::get('/{store}', [StoreController::class, 'index'])->name('store.index');
 Route::get('/{store}/nps', [StoreController::class, 'nps'])->name('store.nps');
 Route::get('/{store}/thank-you', [StoreController::class, 'npsThanks'])->name('store.npsThanks');
+
+
+// New Pages
 
 Auth::routes();
 

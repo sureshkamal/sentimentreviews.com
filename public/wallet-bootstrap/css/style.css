@@ -8686,7 +8686,7 @@ p, .paragraph {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #040404;
-  font-family: var(--bs-font-roboto)
+  font-family: var(--bs-font-roboto);
   font-weight: 700;
 }
 
@@ -9278,7 +9278,7 @@ blockquote::before {
 }
 
 .navbar-brand {
-  font-family: var(--bs-font-roboto)
+  font-family: var(--bs-font-roboto);
   font-size: 30px;
 }
 
