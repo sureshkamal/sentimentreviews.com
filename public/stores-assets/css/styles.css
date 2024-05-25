@@ -157,13 +157,23 @@ ul.button-lists li{
     width: 40px;
     height: 40px;
     position: absolute;
-    left: 15px;
-    top: 13px;
+    left: 22px;
+    top: -1px;
     background-size: contain;
     border-radius: 30px;
 }
 .icon-trip-advisor:before {
     background: url(/stores-assets/images/icons/tripadvisor.png) no-repeat;
+    content: " ";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 26px;
+    top: 4px;
+    background-size: contain;
+}
+.icon-my-rewards:before {
+    background: url(/stores-assets/images/icons/gift.png) no-repeat;
     content: " ";
     width: 30px;
     height: 30px;

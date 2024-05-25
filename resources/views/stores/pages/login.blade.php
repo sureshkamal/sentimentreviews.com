@@ -4,7 +4,7 @@
 ])
 @section('content')
 <div class="container" id="stores-landing">
-    <div  style="background: url('{{ asset($store->branch_bg1) }}'), lightgray 50% / cover no-repeat;">
+    <div  style="background: url('{{ asset($store->branch_bg1) }}'), lightgray 50% / contain no-repeat;">
          <div class="bg-landing bg-store-gradient">
             <div class="bg-dark">
                 <div class="row pt-3" >
@@ -44,7 +44,7 @@
                                 <input type="password" name="password" placeholder="Password" />
                                 <input type="hidden" name="slug" value="{{$store->slug}}" />
                                 <button class="btn-store" id="stickyButton" onclick="togglePopup()">Login</button>
-                                <p class="text-center"><a href="" class="font-inter store-description text-center">Forgot password?</a></p>
+                                <!-- <p class="text-center"><a href="" class="font-inter store-description text-center">Forgot password?</a></p> -->
                             </form>
                         </div>
                     </div>

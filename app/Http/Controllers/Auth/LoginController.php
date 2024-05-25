@@ -81,7 +81,7 @@ class LoginController extends Controller
                 if($user->user_type_id == 1)
                     return redirect()->intended('/dashboard'); // or any route you want to redirect to
                 else
-                    return redirect()->intended('/$slug/review'); // or any route you want to redirect to
+                    return redirect()->intended("/$slug/review");// or any route you want to redirect to
 
             } else {
                 // Password does not match
@@ -104,7 +104,7 @@ class LoginController extends Controller
 
             // Log the new user in
             Auth::login($newUser);
-            return redirect()->intended('/$slug/review'); // or any route you want to redirect to
+            return redirect()->intended("/$slug/review"); // or any route you want to redirect to
 
             // return redirect()->intended('/yamamori'); // or any route you want to redirect to
         }
