@@ -4,7 +4,7 @@
 ])
 @section('content')
 <div class="container" id="stores-landing">
-    <div  style="background: url('{{ asset($store->branch_bg1) }}'), lightgray 50% / contain no-repeat;">
+    <div  style="background: url('{{ asset($store->branch_bg2) }}'), lightgray 50% / contain no-repeat;">
     <!-- <div  style="background: url('/stores-assets/images/stores/yamamori.png'), lightgray 50% / cover no-repeat;"> -->
          <div class="bg-landing bg-store-gradient">
             <div class="bg-dark">
