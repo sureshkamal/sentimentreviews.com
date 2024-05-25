@@ -281,8 +281,8 @@
               <div class="card mb-4">
                 <div class="card-header"><strong>Form validation</strong><span class="small ms-1">Custom styles</span></div>
                 <div class="card-body">
-                  <p class="text-medium-emphasis small">For custom CoreUI for Bootstrap form validation messages, you’ll need to add the <code>novalidate</code> boolean attribute to your <code>&lt;form&gt;</code>. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you’ll see the <code>:invalid</code> and <code>:valid</code> styles applied to your form controls.</p>
-                  <p class="text-medium-emphasis small">Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for <code>&lt;select&gt;</code>s are only available with <code>.form-select</code>, and not <code>.form-control</code>.</p>
+                  <!-- <p class="text-medium-emphasis small">For custom CoreUI for Bootstrap form validation messages, you’ll need to add the <code>novalidate</code> boolean attribute to your <code>&lt;form&gt;</code>. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you’ll see the <code>:invalid</code> and <code>:valid</code> styles applied to your form controls.</p> -->
+                  <!-- <p class="text-medium-emphasis small">Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for <code>&lt;select&gt;</code>s are only available with <code>.form-select</code>, and not <code>.form-control</code>.</p> -->
                   <div class="example">
                     <ul class="nav nav-tabs" role="tablist">
                       <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1000" role="tab">
@@ -296,49 +296,24 @@
                     </ul>
                     <div class="tab-content rounded-bottom">
                       <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1000">
-                        <form class="row g-3 needs-validation" novalidate="">
+                        <form class="row g-3 needs-validation" novalidate="" action="/admin/add-store">
+                          @csrf
                           <div class="col-md-4">
-                            <label class="form-label" for="validationCustom01">First name</label>
+                            <label class="form-label" for="validationCustom01">Store name</label>
                             <input class="form-control" id="validationCustom01" type="text" value="Mark" required="">
                             <div class="valid-feedback">Looks good!</div>
                           </div>
                           <div class="col-md-4">
-                            <label class="form-label" for="validationCustom02">Last name</label>
-                            <input class="form-control" id="validationCustom02" type="text" value="Otto" required="">
+                            <label class="form-label" for="email">Store admin email</label>
+                            <input class="form-control" name="email" type="text" placeholder="Enter Email" required="">
                             <div class="valid-feedback">Looks good!</div>
                           </div>
                           <div class="col-md-4">
-                            <label class="form-label" for="validationCustomUsername">Username</label>
-                            <div class="input-group has-validation"><span class="input-group-text" id="inputGroupPrepend">@</span>
-                              <input class="form-control" id="validationCustomUsername" type="text" aria-describedby="inputGroupPrepend" required="">
-                              <div class="invalid-feedback">Please choose a username.</div>
-                            </div>
+                            <label class="form-label" for="validationCustom01">Store admin password</label>
+                            <input class="form-control" name="password" type="password" placeholder="Password" required="">
+                            <div class="valid-feedback">Looks good!</div>
                           </div>
-                          <div class="col-md-6">
-                            <label class="form-label" for="validationCustom03">City</label>
-                            <input class="form-control" id="validationCustom03" type="text" required="">
-                            <div class="invalid-feedback">Please provide a valid city.</div>
-                          </div>
-                          <div class="col-md-3">
-                            <label class="form-label" for="validationCustom04">State</label>
-                            <select class="form-select" id="validationCustom04" required="">
-                              <option selected="" disabled="" value="">Choose...</option>
-                              <option>...</option>
-                            </select>
-                            <div class="invalid-feedback">Please select a valid state.</div>
-                          </div>
-                          <div class="col-md-3">
-                            <label class="form-label" for="validationCustom05">Zip</label>
-                            <input class="form-control" id="validationCustom05" type="text" required="">
-                            <div class="invalid-feedback">Please provide a valid zip.</div>
-                          </div>
-                          <div class="col-12">
-                            <div class="form-check">
-                              <input class="form-check-input" id="invalidCheck" type="checkbox" required="">
-                              <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
-                              <div class="invalid-feedback">You must agree before submitting.</div>
-                            </div>
-                          </div>
+                          
                           <div class="col-12">
                             <button class="btn btn-primary" type="submit">Submit form</button>
                           </div>

@@ -50,13 +50,13 @@
                 <div class="card-body">
                   <h1>Login</h1>
                   <p class="text-medium-emphasis">Sign In to your account</p>
-                  <form method="POST" action="{{ route('admin/login/auth') }}">
+                  <form method="POST" action="/admin/login/auth">
                    @csrf
                   <div class="input-group mb-3"><span class="input-group-text">
                       <svg class="icon">
                         <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-user"></use>
                       </svg></span>
-                    <input class="form-control" name="useremail" type="text" placeholder="Enter Email">
+                    <input class="form-control" name="email" type="text" placeholder="Enter Email">
                   </div>
                   <div class="input-group mb-4"><span class="input-group-text">
                       <svg class="icon">
@@ -66,7 +66,7 @@
                   </div>
                   <div class="row">
                     <div class="col-6">
-                      <button class="btn btn-primary px-4" type="button" >Login</button>
+                      <button class="btn btn-primary px-4" type="submit" >Login</button>
                     </div>
                     <div class="col-6 text-end">
                       <button class="btn btn-link px-0" type="button">Forgot password?</button>

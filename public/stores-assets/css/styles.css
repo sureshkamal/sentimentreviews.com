@@ -1,11 +1,41 @@
 body.stores{
 	width: 100%;
 	height: auto;
-	font-family: "Figtree", Helvetica;
-    /* font-family: sans-serif; */
+    font-family: sans-serif;
+}
+body{
+    font-family: sans-serif;
+}
+a{
+    color: #977811;
+}
+input{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+button.btn-store{
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+.row{
+    width: 100%;
+}
+.revLandHeading{
+    font-size: 30px;
+    font-weight: lighter;
 }
 .stores .container{
-	max-width: 390px;
+/*	max-width: 390px;*/
     margin: 0 auto;
     width: 100%;
     padding: 0px;
@@ -48,12 +78,15 @@ body.stores{
     font-weight: bold;
 }
 .stores h1, .store-title{
-	font-family: "Figtree", Helvetica;
+/*	font-family: "Figtree", Helvetica;*/
+    font-family: sans-serif;
 	color: #fff!important;
 }
-
+.font-sans{
+    font-family: sans-serif;
+}
 .font-figtree{
-	font-family: "Figtree", Helvetica;;
+	font-family: "Figtree", Helvetica;
 }
 .font-inter{
 	font-family: "Inter", Helvetica;
@@ -65,8 +98,8 @@ body.stores{
 }
 .store-description{
 	color: #9c9c9c;
-	font-family: Inter;
-	font-size: 13px;
+    font-family: sans-serif;
+	font-size: 12px;
 	font-style: normal;
 	font-weight: 400;
     text-align: center;
@@ -77,31 +110,49 @@ body.stores{
 	height: 66px;*/
 	flex-shrink: 0;
 	border-radius: 5px;
-	color: #FFF;
-	font-family: Figtree;
-	font-size: 16px;
+    font-family: sans-serif;
+/*	font-size: 16px;*/
 	font-style: normal;
-	font-weight: bold;
-	line-height: 66px;
-	background: #ffffff33;
+/*	font-weight: bold;*/
+	line-height: 37px;
+/*	background: #ffffff33;*/
 	display: block;
-	text-align: center;
+	text-align: left;
 	margin-top:10px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    padding-left: 30%;
 }
+
+.icon-trip-advisor{
+    background-color: #00bc93;
+}
+.icon-instagram{
+    background-color: #e84064;
+    color: #fff;
+}
+.icon-my-rewards{
+    background-color: #96884e;
+    color: #fff;
+}
+
 ul.button-lists li{
 	position: relative;
 }
 .icon-google:before {
     background: url(/stores-assets/images/icons/google.png) no-repeat;
     content: " ";
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: absolute;
-    left: 15px;
-    top: 13px;
+    left: 26px;
+    top: 4px;
+    background-size: contain;
 }
-.icon-open-table:before {
-    background: url(/stores-assets/images/icons/opentable2.png) no-repeat;
+.icon-instagram:before {
+    background: url(/stores-assets/images/icons/instagram.png) no-repeat;
     content: " ";
     width: 40px;
     height: 40px;
@@ -114,11 +165,12 @@ ul.button-lists li{
 .icon-trip-advisor:before {
     background: url(/stores-assets/images/icons/tripadvisor.png) no-repeat;
     content: " ";
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: absolute;
-    left: 15px;
-    top: 13px;
+    left: 26px;
+    top: 4px;
+    background-size: contain;
 }
 .social-links a img {
     width: 32px;
@@ -239,13 +291,34 @@ ul.button-lists li{
 
 /* sticky button	*/
 #stickyButton {
-    position: fixed;
-    bottom: 0; /* Adjust as needed */
-    left: 0; /* Adjust as needed */
-/*    display: none; /* Initially hide the button */
+/*    position: fixed;*/
+/*    bottom: 0; */
+/*    left: 0; */
+    width: 100%;
 }
 .store-logo{
-    width: 25%;
+    width: 30%;
     display: block;
     margin: auto;
 }
+
+/* switch button branch create page */
+.custom-switch .custom-control-label::before {
+    left: -2.25rem;
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.custom-switch .custom-control-label::after {
+    top: 0.25rem;
+    left: -2rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    transform: translateX(1.5rem);
+}
+

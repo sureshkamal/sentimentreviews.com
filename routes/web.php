@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StoreController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
+use App\Models\Store;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,9 +40,18 @@ Route::prefix('admin')->group(function () {
         return view('admin.index');		
     });
     Route::get('/stores', function () {
-        return view('admin.stores');		
+		$stores = Store::with('user')->get();
+        return view('admin.stores', compact('stores'));
+        // return view('admin.stores');		
     });
-    
+	Route::get('/add-store', function () {
+        return view('admin.create-store');		
+    });
+	Route::post('/add-store', [AdminController::class, 'addStore']);
+	Route::get('/{store}/create-branch', [AdminController::class, 'createBranchPage']);
+	Route::post('/{store}/create-branch', [AdminController::class, 'createBranch']);
+	Route::get('/{store}/view-branches', [AdminController::class, 'viewBranches']);
+
 });
 
 Route::get('/contact-us', function () {
@@ -45,7 +59,10 @@ Route::get('/contact-us', function () {
 });
 Route::post('/contact', [HomeController::class, 'submitForm']);
 
-Route::get('/{store}', [StoreController::class, 'index'])->name('store.index');
+// Route::get('/{store}', [StoreController::class, 'index'])->name('store.index');
+// Route::get('/{store}/login', [StoreController::class, 'login'])->name('store.login');
+Route::get('/{store}', [StoreController::class, 'login'])->name('store.login');
+Route::get('/{store}/review', [StoreController::class, 'index'])->name('store.index');
 Route::get('/{store}/nps', [StoreController::class, 'nps'])->name('store.nps');
 Route::get('/{store}/thank-you', [StoreController::class, 'npsThanks'])->name('store.npsThanks');
 
@@ -54,10 +71,13 @@ Route::get('/{store}/thank-you', [StoreController::class, 'npsThanks'])->name('s
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Auth::routes();
 
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+// Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+//login-signup
+Route::post('/signin', [LoginController::class, 'signin']);
+
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
@@ -68,5 +88,6 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'App\Http\Controllers\PageController@index']);
+	Route::post('/update-count', [UserController::class, 'updateCount']);
 });
 

@@ -1,21 +1,15 @@
-<!DOCTYPE html><!--
-* CoreUI - Free Bootstrap Admin Template
-* @version v4.2.2
-* @link https://coreui.io/product/free-bootstrap-admin-template/
-* Copyright (c) 2023 creativeLabs Łukasz Holeczek
-* Licensed under MIT (https://github.com/coreui/coreui-free-bootstrap-admin-template/blob/main/LICENSE)
---><!-- Breadcrumb-->
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <base href="./../">
+    <base href="/admin/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>CoreUI Free Bootstrap Admin Template</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <title>Sentiment</title>
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
@@ -27,46 +21,52 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png"> -->
     <link rel="manifest" href="assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Vendors styles-->
-    <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
-    <link rel="stylesheet" href="css/vendors/simplebar.css">
+    <link rel="stylesheet" href="/admin/vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="/admin/css/vendors/simplebar.css">
     <!-- Main styles for this application-->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/admin/css/style.css" rel="stylesheet">
     <!-- We use those styles to show code examples, you should remove them in your application.-->
-    <link href="css/examples.css" rel="stylesheet">
-    <link rel="canonical" href="https://coreui.io/docs/components/collapse/">
+    <link href="/admin/css/examples.css" rel="stylesheet">
+    <link href="/admin/vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
   </head>
   <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
       <div class="sidebar-brand d-none d-md-flex">
-        <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
+        <!-- <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
           <use xlink:href="assets/brand/coreui.svg#full"></use>
         </svg>
         <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
           <use xlink:href="assets/brand/coreui.svg#signet"></use>
-        </svg>
+        </svg> -->
       </div>
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
-        <li class="nav-item"><a class="nav-link" href="index.html">
+        <li class="nav-item"><a class="nav-link" href="/admin/dashboard">
             <svg class="nav-icon">
               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
             </svg> Dashboard<span class="badge badge-sm bg-info ms-auto">NEW</span></a></li>
-        <li class="nav-title">Theme</li>
-        <li class="nav-item"><a class="nav-link" href="colors.html">
+        <!-- <li class="nav-title">Theme</li> -->
+        <li class="nav-item"><a class="nav-link" href="stores">
             <svg class="nav-icon">
               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
-            </svg> Colors</a></li>
-        <li class="nav-item"><a class="nav-link" href="typography.html">
+            </svg> Stores
+          </a></li>
+        <li class="nav-item"><a class="nav-link" href="add-store">
+            <svg class="nav-icon">
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
+            </svg> Add Store
+          </a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="typography.html">
             <svg class="nav-icon">
               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
             </svg> Typography</a></li>
-        <li class="nav-title">Components</li>
-        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <li class="nav-title">Components</li> -->
+        <!-- <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
             </svg> Base</a>
@@ -105,10 +105,8 @@
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
-            </svg> Store</a>
+            </svg> Forms</a>
           <ul class="nav-group-items">
-            <li class="nav-item"><a class="nav-link" href="forms/create-store.blade.html"> Create Store</a></li>
-            
             <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Form Control</a></li>
             <li class="nav-item"><a class="nav-link" href="forms/select.html"> Select</a></li>
             <li class="nav-item"><a class="nav-link" href="forms/checks-radios.html"> Checks and radios</a></li>
@@ -173,17 +171,17 @@
             <svg class="nav-icon">
               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-description"></use>
             </svg> Docs</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-danger" href="https://coreui.io/pro/" target="_top">
+        <li class="nav-item"><a class="nav-link nav-link-danger" h                                                                                                      ref="https://coreui.io/pro/" target="_top">
             <svg class="nav-icon">
               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-layers"></use>
             </svg> Try CoreUI
             <div class="fw-semibold">PRO</div>
-          </a></li>
+          </a></li> -->
       </ul>
       <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
     </div>
     <div class="wrapper d-flex flex-column min-vh-100 bg-light">
-      <header class="header header-sticky mb-4">
+      <!-- <header class="header header-sticky mb-4">
         <div class="container-fluid">
           <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
             <svg class="icon icon-lg">
@@ -263,117 +261,49 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb my-0 ms-2">
               <li class="breadcrumb-item">
-                <!-- if breadcrumb is single--><a href="#">Home</a>
+                <!-- if breadcrumb is single-- ><span>Home</span>
               </li>
-              <li class="breadcrumb-item">
-                <!-- if breadcrumb is single--><a href="#">Components</a>
-              </li>
-              <li class="breadcrumb-item">
-                <!-- if breadcrumb is single--><a href="#">Base</a>
-              </li>
-              <li class="breadcrumb-item active"><span>Collapse</span></li>
+              <li class="breadcrumb-item active"><span>Add Store</span></li>
             </ol>
           </nav>
         </div>
-      </header>
+      </header> -->
       <div class="body flex-grow-1 px-3">
         <div class="container-lg">
-          <div class="card mb-4">
-            <div class="card-header"><strong>Collapse</strong></div>
-            <div class="card-body">
-              <p class="text-medium-emphasis small">You can use a link with the <code>href</code> attribute, or a button with the <code>data-coreui-target</code> attribute. In both samples, the <code>data-coreui-toggle="collapse""</code> is required.</p>
-              <div class="example">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1000" role="tab">
-                      <svg class="icon me-2">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-media-play"></use>
-                      </svg>Preview</a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://coreui.io/docs/components/collapse/#example" target="_blank">
-                      <svg class="icon me-2">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-code"></use>
-                      </svg>Code</a></li>
-                </ul>
-                <div class="tab-content rounded-bottom">
-                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1000">
-                    <p><a class="btn btn-primary" data-coreui-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Link with href</a>
-                      <button class="btn btn-primary" type="button" data-coreui-toggle="collapse" data-coreui-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Button with data-target</button>
-                    </p>
-                    <div class="collapse" id="collapseExample">
-                      <div class="card mb-4 card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
-                    </div>
-                  </div>
+         
+          <div class="row pt-4">
+            <div class="col-md-12">
+              <div class="card mb-4">
+                <div class="card-header">Add Store</div>
+                <div class="card-body">
+                  <!-- /.row--><br>
+                  <form class="row g-3 needs-validation" novalidate="" action="/admin/add-store" method="POST">
+                          @csrf
+                          <div class="col-md-4">
+                            <label class="form-label" for="storename">Store name</label>
+                            <input class="form-control" id="validationCustom01" name="storename" type="text" value="Mark" required="">
+                            <div class="valid-feedback">Looks good!</div>
+                          </div>
+                          <div class="col-md-4">
+                            <label class="form-label" for="email">Store admin email</label>
+                            <input class="form-control" name="email" type="text" placeholder="Enter Email" required="">
+                            <div class="valid-feedback">Looks good!</div>
+                          </div>
+                          <div class="col-md-4">
+                            <label class="form-label" for="validationCustom01">Store admin password</label>
+                            <input class="form-control" name="password" type="password" placeholder="Password" required="">
+                            <div class="valid-feedback">Looks good!</div>
+                          </div>
+                          <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                          </div>
+                        </form>
                 </div>
               </div>
             </div>
+            <!-- /.col-->
           </div>
-          <div class="card mb-4">
-            <div class="card-header"><strong>Collapse</strong><span class="small ms-1">Horizontal</span></div>
-            <div class="card-body">
-              <p class="text-medium-emphasis small">The collapse plugin also supports horizontal collapsing. Add the <code>.collapse-horizontal</code> modifier class to transition the <code>width</code> instead of <code>height</code> and set a <code>width</code> on the immediate child element. Feel free to write your own custom Sass, use inline styles, or use our <a href="/docs/4.1/utilities/sizing/">width utilities</a>.</p>
-              <div class="example">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1001" role="tab">
-                      <svg class="icon me-2">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-media-play"></use>
-                      </svg>Preview</a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://coreui.io/docs/components/collapse/#horizontal" target="_blank">
-                      <svg class="icon me-2">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-code"></use>
-                      </svg>Code</a></li>
-                </ul>
-                <div class="tab-content rounded-bottom">
-                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1001">
-                    <p>
-                      <button class="btn btn-primary" type="button" data-coreui-toggle="collapse" data-coreui-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">Toggle width collapse</button>
-                    </p>
-                    <div style="min-height: 120px;">
-                      <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                        <div class="card card-body" style="width: 300px;">This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-4">
-            <div class="card-header"><strong>Collapse</strong><span class="small ms-1">multiple targets</span></div>
-            <div class="card-body">
-              <p class="text-medium-emphasis small">A <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide multiple elements by referencing them with a selector in its <code>href</code> or <code>data-coreui-target</code> attribute. Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide an element if they each reference it with their <code>href</code> or <code>data-coreui-target</code> attribute</p>
-              <div class="example">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1002" role="tab">
-                      <svg class="icon me-2">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-media-play"></use>
-                      </svg>Preview</a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://coreui.io/docs/components/collapse/#multiple-targets" target="_blank">
-                      <svg class="icon me-2">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-code"></use>
-                      </svg>Code</a></li>
-                </ul>
-                <div class="tab-content rounded-bottom">
-                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1002">
-                    <p><a class="btn btn-primary" data-coreui-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-                      <button class="btn btn-primary" type="button" data-coreui-toggle="collapse" data-coreui-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle second element</button>
-                      <button class="btn btn-primary" type="button" data-coreui-toggle="collapse" data-coreui-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
-                    </p>
-                    <div class="row">
-                      <div class="col-sm-12 col-md-6">
-                        <div class="collapse multi-collapse" id="multiCollapseExample1">
-                          <div class="card mb-4 card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
-                        </div>
-                      </div>
-                      <div class="col-sm-12 col-md-6">
-                        <div class="collapse multi-collapse" id="multiCollapseExample2">
-                          <div class="card mb-4 card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- /.row-->
         </div>
       </div>
       <footer class="footer">
@@ -382,8 +312,13 @@
       </footer>
     </div>
     <!-- CoreUI and necessary plugins-->
-    <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
-    <script src="vendors/simplebar/js/simplebar.min.js"></script>
+    <script src="/admin/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="/admin/vendors/simplebar/js/simplebar.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="/admin/vendors/chart.js/js/chart.min.js"></script>
+    <script src="/admin/vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
+    <script src="/admin/vendors/@coreui/utils/js/coreui-utils.js"></script>
+    <script src="/admin/js/main.js"></script>
     <script>
     </script>
 
