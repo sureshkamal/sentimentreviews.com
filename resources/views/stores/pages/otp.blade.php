@@ -4,31 +4,22 @@
 ])
 @section('content')
 <div class="container" id="stores-landing">
-    <div  style="background: url('{{ asset($store->branch_bg1) }}'), lightgray 50% / contain no-repeat;background-size: contain;">
-         <div class="bg-landing bg-store-gradient">
+    <!-- <div  style="background: url('{{ asset($store->branch_bg1) }}'), lightgray 50% / contain no-repeat;"> -->
             <div class="bg-dark">
                 <div class="row pt-3" >
                     <div class="col-sm-12">
-                        <div>
-                        @if($store->branch_logo)
-                            @if($store->slug == "gbk")
-                            <img src="{{ asset($store->branch_logo) }}" class="store-logo" alt="{{ $store->branch_name }} Logo" style="background-color: #fff; width: 55%;">
-                            @else
-                            <img src="{{ asset($store->branch_logo) }}" class="store-logo" alt="{{ $store->branch_name }} Logo" >
-                            @endif
                         
-                        @else
-                        <p>No store logo available.</p>
-                        @endif
-                            <!-- <img src="{{ $store->image }}" class="store-logo" > -->
-                            <!-- <img src="/stores-assets/images/stores/yamamori-logo3.png" class="store-logo" > -->
-                        </div>
                         <div>
-                            <h4 class="store-heading revLandHeading">Unlock Your</br>Rewards</h4>
+                            <h4 class="store-heading revLandHeading">Verification code</h4>
                             <p class="font-inter store-description" >
-                                Share your experience!</br>
-                                Leave us a review. Just enter your email to begin.
+                                We have sent you a verification code to your email address. Please enter the code to continue.
                             </p>
+                            <form>
+                            <input type="number" name="digit1" />
+                            <input type="number" name="digit2" />
+                            <input type="number" name="digit3" />
+                            <input type="number" name="digit4" />
+                            </form>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -44,7 +35,7 @@
                                 <input type="email" name="email" placeholder="Enter email address" />
                                 <input type="password" name="password" placeholder="Password" />
                                 <input type="hidden" name="slug" value="{{$store->slug}}" />
-                                <button class="btn-store" id="stickyButton" onclick="togglePopup()">Review Now</button>
+                                <button class="btn-store" id="stickyButton" onclick="togglePopup()">Login</button>
                                 <!-- <p class="text-center"><a href="" class="font-inter store-description text-center">Forgot password?</a></p> -->
                             </form>
                         </div>
@@ -67,9 +58,9 @@
 
                
             </div>
-        </div>
+        
 
-    </div>
+    <!-- </div> -->
    
 </div>
 

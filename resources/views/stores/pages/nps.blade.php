@@ -162,7 +162,7 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange" onclick="next(2)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(2)">OK &#10003;</button>
         </div>
         
     </div>
@@ -191,7 +191,7 @@
             
         </div>
         <div>
-            <button class="buttonOrange" onclick="next(3)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(3)">OK &#10003;</button>
         </div>
         
     </div>
@@ -206,7 +206,7 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange" onclick="next(4)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(4)">OK &#10003;</button>
         </div>
         
     </div>
@@ -221,7 +221,7 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange" onclick="next(5)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(5)">OK &#10003;</button>
         </div>
         
     </div>
@@ -236,7 +236,7 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange" onclick="next(6)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(6)">OK &#10003;</button>
         </div>
         
     </div>
@@ -251,7 +251,7 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange" onclick="next(7)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(7)">OK &#10003;</button>
         </div>
         
     </div>
@@ -266,7 +266,7 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange" onclick="next(8)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(8)">OK &#10003;</button>
         </div>
         
     </div>
@@ -281,7 +281,7 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange" onclick="next(9)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(9)">OK &#10003;</button>
         </div>
         
     </div>
@@ -296,7 +296,7 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange" onclick="next(10)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(10)">OK &#10003;</button>
         </div>
         
     </div>
@@ -311,7 +311,7 @@
             <input type="" name="" placeholder="Type your answer here...">
         </div>
         <div>
-            <button class="buttonOrange" onclick="next(0)">OK &#10003;</button><span class="enter">press <strong>Enter ↵</strong></span>
+            <button class="buttonOrange" onclick="next(0)">OK &#10003;</button>
         </div>
         
     </div>

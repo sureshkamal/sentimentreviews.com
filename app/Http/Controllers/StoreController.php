@@ -55,4 +55,13 @@ class StoreController extends Controller
         }
         return view('stores.pages.login', ['store' => $store]);
     }
+
+    public function otp(Request $request, string $storeSlug)
+    {
+        $store = Branch::where('slug', $storeSlug)->first();   
+        if (!$store) {
+            abort(404, 'Store not found.');
+        }
+        return view('stores.pages.login', ['store' => $store]);
+    }
 }

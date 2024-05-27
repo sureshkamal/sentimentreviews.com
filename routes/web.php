@@ -62,6 +62,7 @@ Route::post('/contact', [HomeController::class, 'submitForm']);
 // Route::get('/{store}', [StoreController::class, 'index'])->name('store.index');
 // Route::get('/{store}/login', [StoreController::class, 'login'])->name('store.login');
 Route::get('/{store}', [StoreController::class, 'login'])->name('store.login');
+Route::get('/{store}/otp', [StoreController::class, 'otp'])->name('store.otp');
 Route::get('/{store}/review', [StoreController::class, 'index'])->name('store.index');
 Route::get('/{store}/nps', [StoreController::class, 'nps'])->name('store.nps');
 Route::get('/{store}/thank-you', [StoreController::class, 'npsThanks'])->name('store.npsThanks');

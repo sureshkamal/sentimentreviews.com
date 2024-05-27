@@ -4,14 +4,14 @@
 ])
 @section('content')
 <div class="container" id="stores-landing">
-    <div  style="background: url('{{ asset($store->branch_bg2) }}'), lightgray 50% / contain no-repeat;">
+    <div  style="background: url('{{ asset($store->branch_bg2) }}'), lightgray 50% / contain no-repeat; background-size: contain;">
     <!-- <div  style="background: url('/stores-assets/images/stores/yamamori.png'), lightgray 50% / cover no-repeat;"> -->
          <div class="bg-landing bg-store-gradient">
             <div class="bg-dark">
                 <div class="pt-3">
                     <div>
                         @if($store->branch_logo)
-                            @if($store->slug == "gbk.com")
+                            @if($store->slug == "gbk")
                             <img src="{{ asset($store->branch_logo) }}" class="store-logo" alt="{{ $store->branch_name }} Logo" style="background-color: #fff; width: 55%;">
                             @else
                             <img src="{{ asset($store->branch_logo) }}" class="store-logo" alt="{{ $store->branch_name }} Logo" >
@@ -23,9 +23,10 @@
                         <!-- <img src="/stores-assets/images/stores/yamamori-logo3.png" class="store-logo" > -->
                     </div>
                     <div>
-                        <h4 class="store-heading revLandHeading">Thank you for </br> dining with us</h4>
+                        <!-- <h4 class="store-heading revLandHeading">Thank you for </br> dining with us</h4> -->
                         <p class="font-inter store-description" >
-                            Share your experience and<br >Unlock delectable rewards as tokens </br> 
+                            Share your experience and </br>
+                            Unlock delectable rewards as tokens </br>
                             of our appreciation </p>
                     </div>
                     <div class="clear"></div>
