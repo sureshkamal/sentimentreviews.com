@@ -6,6 +6,7 @@ use App\Http\Controllers\StoreController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OtpController;
 use App\Models\Store;
 
 /*
@@ -78,6 +79,15 @@ Auth::routes();
 // Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 //login-signup
 Route::post('/signin', [LoginController::class, 'signin']);
+
+Route::post('/send-otp', [OtpController::class, 'sendOtp']);
+Route::post('/validate-otp', [OtpController::class, 'validateOtp']);
+
+Route::get('/enter-otp', function () {
+    return view('otp');
+});
+
+Route::post('/validate-otp', [OtpController::class, 'validateOtp']);
 
 
 Route::group(['middleware' => 'auth'], function () {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Branch;
+use App\Models\Nps;
 
 class StoreController extends Controller
 {
@@ -35,7 +36,8 @@ class StoreController extends Controller
         if (!$store) {
             abort(404, 'Store not found.');
         }
-        return view('stores.pages.nps', ['store' => $store]);
+        $questions = Nps::where('branch_id', $store->branch_id)->first();   
+        return view('stores.pages.nps', ['store' => $store, 'questions' => $questions]);
     }
 
     public function npsThanks(Request $request, string $storeSlug)

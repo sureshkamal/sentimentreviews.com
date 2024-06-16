@@ -21,8 +21,7 @@ class LoginController extends Controller
     |--------------------------------------------------------------------------
     |
     | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
+    | redirecting them to your home screen.
     |
     */
 
@@ -72,28 +71,35 @@ class LoginController extends Controller
 
         // Check if the user exists
         $user = User::where('email', $email)->first();
+        $currTime = Carbon::now()->format('Y-m-d H:i:s');
 
         if ($user) {
             // Check if the password matches
             if (Hash::check($password, $user->password)) {
+                $user->update([
+                    'no_of_logins' => $user->no_of_logins + 1,
+                    'last_login' => $currTime,
+                    'updated_at' => $currTime,
+                ]);
+
                 // Log the user in
                 Auth::login($user);
                 if($user->user_type_id == 1)
-                    return redirect()->intended('/dashboard'); // or any route you want to redirect to
+                    return redirect()->intended('/dashboard'); 
                 else
-                    return redirect()->intended("/$slug/nps");// or any route you want to redirect to
+                    return redirect()->intended("/$slug/nps");
 
             } else {
                 // Password does not match
-                return back()->withErrors(['password' => 'Invalid credentials.']);
+                return back()->withErrors(['general' => 'Invalid credentials.'])->withInput();
+                // return back()->withErrors(['password' => 'Invalid credentials.'])->withInput();
             }
         } else {
-            $currTime = Carbon::now()->format('Y-m-d H:i:s');
             // Create a new user
             $newUser = User::create([
                 'email' => $email,
                 'password' => Hash::make($password),
-                'temp_password' => $password,
+                // 'temp_password' => $password,
                 'user_type_id' => 4, //customer
                 'no_of_logins' => 1,
                 'last_login' => $currTime,
@@ -104,9 +110,8 @@ class LoginController extends Controller
 
             // Log the new user in
             Auth::login($newUser);
-            return redirect()->intended("/$slug/review"); // or any route you want to redirect to
+            return redirect()->intended("/$slug/review");
 
-            // return redirect()->intended('/yamamori'); // or any route you want to redirect to
         }
     }
 }

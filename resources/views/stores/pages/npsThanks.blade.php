@@ -60,8 +60,18 @@
             </div>
         </div>
     </div>
-   
+    <div class="">
+        <a href="https://sentiment-reviews.com" style="width: 100%;
+        display: block;
+        text-align: center;
+        margin: 30px 0;
+        font-size: 12px;
+        color: #fff;">
+            Powered by SentimentReviews
+        </a>
 </div>
+</div>
+
 
 
 @endsection

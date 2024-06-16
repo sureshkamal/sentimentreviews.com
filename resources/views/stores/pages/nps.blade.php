@@ -41,7 +41,7 @@
         border: none;
         outline: none;
         border-bottom: 3px solid #fff;
-        font-size: 30px;
+        font-size: 22px;
         color: #fff;
         background-color: rgba(255, 255, 255, 0);
         margin-bottom: 15px;        
@@ -69,13 +69,6 @@
       width: 1%;
       height: 10px;
       background-color: rgb(255 51 0 / 74%);
-    }
-
-    .question{
-        padding: 40px 0;
-    }
-    #nps-landing input[type="radio"]{
-
     }
 
 
@@ -151,9 +144,31 @@
   <div id="myBar"></div>
 </div>
 <div class="container bgBlack" id="nps-landing">
-    <div class="sec1 question" id="question1" data-id="1">
+    @for ($i = 1; $i <= 10; ++$i)
+        <div class="sec{{ $i }} question" id="question{{ $i }}" data-id="{{ $i }}">
+            <div class="background-overlay ">
+            <div class="vertical-center text-center ">
+                <div class="heading">
+                    <span>{{ $i }}&rarr;</span><span>{{ data_get($questions, 'question' . $i) }}</span>
+                </div>
+                <div class="nps-middle-seperator">
+                    <!-- <img src="/assets/images/nps/1.png"> -->
+                </div>
+                <div>
+                    <input type="" name="" placeholder="Type your answer here...">
+                </div>
+                <div>
+                    <button class="buttonOrange" onclick="next({{ $i+1 }})">OK &#10003;</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    @endfor
+
+
+    <!-- <div class="sec1 question" id="question1" data-id="1">
         <div class="heading">
-            <span>1&rarr;</span><span>Hey there! What is your name?</span>
+            <span>1&rarr;</span><span>{{$questions->question1}}</span>
         </div>
         <div>
             <img src="/assets/images/nps/1.png">
@@ -314,7 +329,7 @@
             <button class="buttonOrange" onclick="next(0)">OK &#10003;</button>
         </div>
         
-    </div>
+    </div> -->
    
 </div>
 @endsection
@@ -329,6 +344,8 @@
     var width = 1;
 
     function next(goto) {
+        if(goto > 10)
+            goto = 0;
         progress();
         $(".question").hide();
         $("#question"+goto).show();

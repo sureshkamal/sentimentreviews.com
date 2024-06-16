@@ -40,7 +40,7 @@
                             <li><a href="{{ $store->review_link_google }}" class="btn-store icon-google" onClick="updateCount(1)"> Review on Google</a></li>
                         @endif
                         @if($store->show_trip_adv)
-                            <li><a href="{{ $store->review_link_ta }}" onClick="updateCount(2)" class="btn-store icon-trip-advisor">Review on Trip Advisor</a></li>
+                            <li><a href="{{ $store->review_link_ta }}" onClick="updateCount(2)" class="btn-store icon-trip-advisor"><i class="fab fa-tripadvisor" style="color: black;"></i>Review on Trip Advisor</a></li>
                         @endif
                         @if($store->show_insta)
                             <li><a href="{{ $store->review_link_insta }}" class="btn-store icon-instagram" onClick="updateCount(3)">Follow us on Instagram</a></li>

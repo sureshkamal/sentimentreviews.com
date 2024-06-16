@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Figtree:500,700,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inter:500,700,400" rel="stylesheet">
     <!-- # CSS Plugins -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- # Main Style Sheet -->
     <link rel="stylesheet" href="/wallet-bootstrap/css/style.css?{{time()}}">
     <link rel="stylesheet" href="/stores-assets/css/styles.css?{{time()}}">
@@ -27,7 +28,7 @@
     </style>
 </head>
 
-<body class="stores">
+<body class="stores bg-dark ">
 
 <!-- /navigation -->
  @yield('content')
